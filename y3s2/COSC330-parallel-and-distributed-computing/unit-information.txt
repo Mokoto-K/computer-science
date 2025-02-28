@@ -1,0 +1,47 @@
+Unit Information:
+
+Parallel and distributed computing platforms are vital to high performance computing systems as they underpin large-scale computation. Being able to develop parallelisation strategies for complex processing tasks is a key skill for computer science, engineering and mathematical modelling.
+
+Providing in-depth coverage of software development algorithms and principles, you will be equipped to work with UNIX-based parallel and distributed computer systems.
+
+These include UNIX processes, development of multi-threaded software and the use of system calls to manage synchronisation and inter-process communication.
+
+Exploring principles of shared resources and mutual exclusion, you will analyse implementation strategies for developing multi-threaded and multi-process software for high-performance computation.
+
+Constructing distributed software using Message Passing Interface (MPI), you will also write programs harnessing the computing power of graphics processing hardware.
+
+This unit provides remote access to a range of specialised hardware for you to complete your studies.
+
+
+
+
+Learning outcomes
+Upon completion of this unit, students will be able to:
+
+explain the fundamental paradigms of modern concurrent and parallel programming using appropriate terminology;
+
+analyse a given application or problem and implement a parallelisation strategy for a given parallel or distributed platform;
+
+develop software for parallel or distribute architectures; and
+
+evaluate parallel processing algorithms for speed, efficiency, and select appropriate approaches for different situations and requirements.
+
+
+
+Title	Must Complete	Weight	Offerings	Assessment Notes
+Assessment 1	Yes	10%	All offerings	
+Programming in C programming language. An overall mark of 50% in all assessment tasks is required to pass the unit.
+
+Assessment 2	Yes	10%	All offerings	
+Programming in C programming language. An overall mark of 50% in all assessment tasks is required to pass the unit.
+
+Assessment 3	Yes	10%	All offerings	
+Programming in C programming language. An overall mark of 50% in all assessment tasks is required to pass the unit.
+
+Assessment 4	Yes	10%	All offerings	
+Programming in C programming language. An overall mark of 50% in all assessment tasks is required to pass the unit.
+
+Final Examination	Yes	60%	All offerings	
+Open Book Examination.  It is mandatory to pass this component in order to pass this unit. Note: An overall mark of 50% in all assessment tasks is required to pass the unit.
+
+No. of words:  2000

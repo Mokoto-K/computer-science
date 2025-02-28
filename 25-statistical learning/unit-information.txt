@@ -1,0 +1,38 @@
+Unit Information:
+
+Data analysis has been transformed in recent years through the huge increase in data collection and advances in computational methods. This has led to rapidly evolving methods in statistical learning and is one of the core research areas in statistics and computer science.
+
+With a focus on applications, this unit introduces you to modern approaches to computational data analysis, whether you are interested in further study or research in an area of science, or you want to learn about applications for marketing, finance and other business disciplines.
+
+Exploring cutting-edge topics, you will discuss regression models, linear discriminant analysis, model selection and regularisation (choosing the optimal model, dimension reduction methods, ridge and lasso), tree-based methods such as random forest and boosting, resampling methods and support-vector machines. You will also cover some unsupervised learning methods, including principal components and clustering.
+
+
+
+
+
+Learning outcomes
+Upon completion of this unit, students will be able to:
+
+implement various statistical learning techniques in R to analyse complex datasets, interpret and communicate results and conclusions in a broad range of contexts;
+
+apply critical thinking and understanding of the rationale behind the formulation and components of common statistical models; and
+
+enhance and broaden their knowledge of the theoretical and computational underpinnings of various statistical procedures.
+
+
+
+
+
+
+Title	Must Complete	Weight	Offerings	Assessment Notes
+Assessment 1	Yes	20%	All offerings	
+Computational assignment - short answers
+
+Assessment 2	Yes	20%	All offerings	
+Computational assignment - short answers
+
+Assessment 3	Yes	20%	All offerings	
+Computational assignment - short answers
+
+Assessment 4	Yes	40%	All offerings	
+Computational assignment leading to a small report (20%) and an end of unit oral presentation (20%).

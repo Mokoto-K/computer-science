@@ -1,0 +1,38 @@
+Unit Information:
+
+Are you interested in developing and applying statistical models for the natural or social sciences? Do you want to learn more about the principles of designing a data collection? This unit will help you develop the core skills and knowledge needed for experimental designs and applied statistical models that are used in many scientific fields.
+
+Studying this unit, you will learn to develop and analyse various types of linear regression models which are the foundation of many statistical analyses. You will also explore some common experimental designs such as factorial design and randomised block design.
+
+Focusing on both the theoretical and technical aspects of key statistical concepts, topics include multiple linear regression with quantitative and qualitative explanatory variables, polynomial regression and generalised linear models.
+
+
+
+
+
+Learning outcomes
+Upon completion of this unit, students will be able to:
+
+analyse data, and interpret and communicate results and conclusions, from a wide range of experimental designs;
+
+fit and interpret more complex statistical models, including the linear model; and
+
+build on and broaden their theoretical and technical knowledge of statistical terminology, concepts and methodology, which will enable them to read and critically appraise scientific literature with some confidence.
+
+
+
+Title	Must Complete	Weight	Offerings	Assessment Notes
+Assessment 1	Yes	5%	All offerings	
+Online Quiz: Simple Linear Regression and hypothesis testing. Students must obtain at least 40% for the assessments overall.
+
+Assessment 2	Yes	15%	All offerings	
+Multiple Regression. Students must obtain at least 40% for the assessments overall.
+
+Assessment 3	Yes	15%	All offerings	
+Model Building, Variable Screening and Residual Analysis. Students must obtain at least 40% for the assessments overall.
+
+Assessment 4	Yes	15%	All offerings	
+Generalised Linear Models, experimental design.  Students must obtain at least 40% for the assessments overall.
+
+Final Examination	Yes	50%	All offerings	
+Students must obtain at least 40% in the final examination and obtain a passing grade overall.
