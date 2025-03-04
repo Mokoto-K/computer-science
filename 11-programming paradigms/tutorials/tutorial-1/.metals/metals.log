@@ -1,539 +1,78 @@
-2025.03.01 12:21:59 INFO  Started: Metals version 1.5.1 in folders '/home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1' for client Neovim 0.10.4+v0.10.4.[0m
-2025.03.01 12:22:00 INFO  no build target found for /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/src/main/scala/cosc250/firststeps/StepOne.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
-2025.03.01 12:22:00 INFO  Attempting to connect to the build server...[0m
-2025.03.01 12:22:00 INFO  Running BSP server List(/usr/bin/scala-cli, bsp, --json-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-options-v2.json, --json-launcher-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-launcher-options.json, --envs-file, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-envs.json, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1)[0m
-2025.03.01 12:22:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/bsp.trace.json or /home/lenny/.cache/metals/bsp.trace.json[0m
-2025.03.01 12:22:01 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0.pom[0m
-2025.03.01 12:22:02 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0.pom[0m
-2025.03.01 12:22:02 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0.pom[0m
-2025.03.01 12:22:02 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0.pom[0m
-2025.03.01 12:22:02 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0.pom[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0.pom[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0-sources.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0-sources.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloading https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0-sources.jar[0m
-2025.03.01 12:22:04 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0.jar[0m
-2025.03.01 12:22:06 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0-sources.jar[0m
-2025.03.01 12:22:06 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0-sources.jar[0m
-2025.03.01 12:22:06 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.1.0/junit-interface-1.1.0-sources.jar[0m
-2025.03.01 12:22:06 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit-diff_3/1.1.0/munit-diff_3-1.1.0.jar[0m
-2025.03.01 12:22:09 INFO  BSP server: Downloaded https://repo1.maven.org/maven2/org/scalameta/munit_3/1.1.0/munit_3-1.1.0.jar[0m
-2025.03.01 12:22:09 INFO  time: Connected to build server in 9.11s[0m
-2025.03.01 12:22:09 INFO  Connected to Build server: scala-cli v1.5.0[0m
-2025.03.01 12:22:09 INFO  running doctor check[0m
-2025.03.01 12:22:09 INFO  java targets: tutorial-1_f4dd477a3a, tutorial-1_f4dd477a3a-test[0m
-2025.03.01 12:22:09 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:22:09 INFO  time: compiled tutorial-1_f4dd477a3a in 0.18s[0m
-2025.03.01 12:22:09 INFO  compiling tutorial-1_f4dd477a3a-test (1 scala source)[0m
-2025.03.01 12:22:09 INFO  time: compiled tutorial-1_f4dd477a3a-test in 0.32s[0m
-2025.03.01 12:22:11 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:22:11 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:22:11 INFO  time: indexed workspace in 2.1s[0m
-2025.03.01 12:22:26 INFO  Started: Metals version 1.5.1 in folders '/home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1' for client Neovim 0.10.4+v0.10.4.[0m
-2025.03.01 12:22:27 INFO  no build target found for /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/src/main/scala/cosc250/firststeps/StepOne.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
-2025.03.01 12:22:27 INFO  Attempting to connect to the build server...[0m
-2025.03.01 12:22:27 INFO  Running BSP server List(/usr/bin/scala-cli, bsp, --json-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-options-v2.json, --json-launcher-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-launcher-options.json, --envs-file, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-envs.json, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1)[0m
-2025.03.01 12:22:27 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/bsp.trace.json or /home/lenny/.cache/metals/bsp.trace.json[0m
-2025.03.01 12:22:27 INFO  time: Connected to build server in 0.51s[0m
-2025.03.01 12:22:27 INFO  Connected to Build server: scala-cli v1.5.0[0m
-2025.03.01 12:22:27 INFO  running doctor check[0m
-2025.03.01 12:22:27 INFO  java targets: tutorial-1_f4dd477a3a, tutorial-1_f4dd477a3a-test[0m
-2025.03.01 12:22:29 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:22:29 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:22:29 INFO  time: indexed workspace in 1.69s[0m
-2025.03.01 12:22:29 INFO  Shutting down server[0m
-2025.03.01 12:22:29 INFO  shutting down Metals[0m
-2025.03.01 12:22:29 INFO  Shut down connection with build server.[0m
-2025.03.01 12:22:29 INFO  BSP server: Mar 01, 2025 12:22:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification[0m
-2025.03.01 12:22:29 INFO  BSP server: WARNING: Notification threw an exception: {[0m
-2025.03.01 12:22:29 INFO  BSP server:   "jsonrpc": "2.0",[0m
-2025.03.01 12:22:29 INFO  BSP server:   "method": "build/exit",[0m
-2025.03.01 12:22:29 INFO  BSP server:   "params": null[0m
-2025.03.01 12:22:29 INFO  BSP server: }[0m
-2025.03.01 12:22:29 INFO  BSP server: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)[0m
-2025.03.01 12:22:29 INFO  BSP server: Caused by: java.lang.reflect.InvocationTargetException[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	... 13 more[0m
-2025.03.01 12:22:29 INFO  BSP server: Caused by: java.lang.RuntimeException: BSP server not initialized yet[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at scala.sys.package$.error(package.scala:27)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at scala.build.bsp.BloopSession$Reference.get(BloopSession.scala:70)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at scala.build.bsp.BspImpl.$anonfun$11(BspImpl.scala:474)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	at scala.build.bsp.BuildServerProxy.onBuildExit(BuildServerProxy.scala:29)[0m
-2025.03.01 12:22:29 INFO  BSP server: 	... 15 more[0m
-2025.03.01 12:22:29 INFO  BSP server: [0m
-Mar 01, 2025 12:22:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 2
-2025.03.01 12:22:29 WARN  sql closed: select * from dismissed_notification where id = ? and when_expires > ? limit 1;[0m
-2025.03.01 12:25:13 INFO  Cancelling compilation on scala-cli server[0m
-Exception in thread "pool-6-thread-1" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:25:13 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:25:13 INFO  time: compiled tutorial-1_f4dd477a3a in 0.22s[0m
-2025.03.01 12:25:13 INFO  time: Imported build in 0.24s[0m
-2025.03.01 12:25:13 INFO  time: Imported build in 0.19s[0m
-2025.03.01 12:25:13 INFO  running doctor check[0m
-2025.03.01 12:25:13 INFO  running doctor check[0m
-2025.03.01 12:25:13 INFO  java targets: tutorial-1_f4dd477a3a, tutorial-1_f4dd477a3a-test[0m
-2025.03.01 12:25:13 INFO  java targets: tutorial-1_f4dd477a3a, tutorial-1_f4dd477a3a-test[0m
-2025.03.01 12:25:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:25:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:25:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:25:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.01 12:25:13 INFO  time: indexed workspace in 0.97s[0m
-2025.03.01 12:25:13 INFO  time: indexed workspace in 0.97s[0m
-Exception in thread "pool-7-thread-1" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:26:37 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:26:37 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 4m 10.29s)[0m
-2025.03.01 12:26:37 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:26:37 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-2025.03.01 12:28:36 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:36 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 6m 9.334s)[0m
-2025.03.01 12:28:36 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:36 INFO  time: compiled tutorial-1_f4dd477a3a in 25ms[0m
-2025.03.01 12:28:36 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:36 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 6m 9.483s)[0m
-2025.03.01 12:28:36 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:36 INFO  time: compiled tutorial-1_f4dd477a3a in 29ms[0m
-Exception in thread "pool-7-thread-2" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:28:46 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:46 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 6m 18.627s)[0m
-2025.03.01 12:28:46 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:28:46 INFO  time: compiled tutorial-1_f4dd477a3a in 0.1s[0m
-Mar 01, 2025 12:28:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 277
-Exception in thread "pool-7-thread-3" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:39:12 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:12 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 16m 45.09s)[0m
-2025.03.01 12:39:12 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:12 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-2025.03.01 12:39:12 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:12 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 16m 45.337s)[0m
-2025.03.01 12:39:12 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:12 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-2025.03.01 12:39:55 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:55 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 17m 27.551s)[0m
-2025.03.01 12:39:55 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:55 INFO  time: compiled tutorial-1_f4dd477a3a in 54ms[0m
-2025.03.01 12:39:55 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:55 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 17m 27.719s)[0m
-2025.03.01 12:39:55 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:39:55 INFO  time: compiled tutorial-1_f4dd477a3a in 42ms[0m
-2025.03.01 12:40:09 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:40:09 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 17m 42.326s)[0m
-2025.03.01 12:40:09 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:40:09 INFO  time: compiled tutorial-1_f4dd477a3a in 0.1s[0m
-Exception in thread "pool-7-thread-4" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Exception in thread "pool-7-thread-5" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:40:48 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:40:48 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 18m 20.916s)[0m
-2025.03.01 12:40:48 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:40:48 INFO  time: compiled tutorial-1_f4dd477a3a in 0.16s[0m
-Exception in thread "pool-7-thread-6" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:45:23 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:45:23 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 22m 55.879s)[0m
-2025.03.01 12:45:23 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:45:23 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-2025.03.01 12:45:23 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:45:23 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 22m 56.144s)[0m
-2025.03.01 12:45:23 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:45:23 INFO  time: compiled tutorial-1_f4dd477a3a in 0.16s[0m
-2025.03.01 12:49:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:49:39 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 27m 12.07s)[0m
-2025.03.01 12:49:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:49:39 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-2025.03.01 12:49:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:49:39 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 27m 12.309s)[0m
-2025.03.01 12:49:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:49:39 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-Exception in thread "pool-7-thread-7" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:51:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:51:15 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 28m 47.755s)[0m
-2025.03.01 12:51:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:51:15 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-2025.03.01 12:51:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:51:15 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 28m 48.002s)[0m
-2025.03.01 12:51:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:51:15 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-Exception in thread "pool-7-thread-8" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:55:56 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:55:56 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 33m 29.326s)[0m
-2025.03.01 12:55:56 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:55:56 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-2025.03.01 12:56:42 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:42 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 15.106s)[0m
-2025.03.01 12:56:42 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:42 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-2025.03.01 12:56:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:45 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 18.113s)[0m
-2025.03.01 12:56:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:45 INFO  time: compiled tutorial-1_f4dd477a3a in 0.12s[0m
-Exception in thread "pool-7-thread-9" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:56:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:49 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 22.376s)[0m
-2025.03.01 12:56:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:49 INFO  time: compiled tutorial-1_f4dd477a3a in 92ms[0m
-2025.03.01 12:56:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:49 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 22.567s)[0m
-2025.03.01 12:56:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:56:49 INFO  time: compiled tutorial-1_f4dd477a3a in 0.11s[0m
-Exception in thread "pool-7-thread-10" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:57:02 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:57:02 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 34.425s)[0m
-2025.03.01 12:57:02 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:57:02 INFO  time: compiled tutorial-1_f4dd477a3a in 0.11s[0m
-2025.03.01 12:57:02 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:57:02 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 34m 34.64s)[0m
-2025.03.01 12:57:02 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:57:02 INFO  time: compiled tutorial-1_f4dd477a3a in 98ms[0m
-Exception in thread "pool-7-thread-11" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:58:27 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:58:27 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 35m 59.442s)[0m
-2025.03.01 12:58:27 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:58:27 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-2025.03.01 12:58:27 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:58:27 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 35m 59.679s)[0m
-2025.03.01 12:58:27 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:58:27 INFO  time: compiled tutorial-1_f4dd477a3a in 0.14s[0m
-Exception in thread "pool-7-thread-12" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:59:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:59:39 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 37m 12.292s)[0m
-2025.03.01 12:59:39 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:59:39 INFO  time: compiled tutorial-1_f4dd477a3a in 0.17s[0m
-Exception in thread "pool-7-thread-13" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 12:59:51 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:59:51 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 37m 23.508s)[0m
-2025.03.01 12:59:51 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 12:59:51 INFO  time: compiled tutorial-1_f4dd477a3a in 94ms[0m
-Exception in thread "pool-7-thread-14" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:00:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:00:15 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 37m 48.293s)[0m
-2025.03.01 13:00:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:00:15 INFO  time: compiled tutorial-1_f4dd477a3a in 90ms[0m
-Exception in thread "pool-7-thread-15" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:00:25 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:00:25 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 37m 57.944s)[0m
-2025.03.01 13:00:25 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:00:25 INFO  time: compiled tutorial-1_f4dd477a3a in 84ms[0m
-2025.03.01 13:01:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:01:45 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 39m 18.042s)[0m
-2025.03.01 13:01:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:01:45 INFO  time: compiled tutorial-1_f4dd477a3a in 0.13s[0m
-Exception in thread "pool-7-thread-16" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Mar 01, 2025 1:05:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 1371
-2025.03.01 13:06:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:15 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 43m 47.61s)[0m
-2025.03.01 13:06:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:15 INFO  time: compiled tutorial-1_f4dd477a3a in 0.17s[0m
-2025.03.01 13:06:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:15 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 43m 47.88s)[0m
-2025.03.01 13:06:15 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:15 INFO  time: compiled tutorial-1_f4dd477a3a in 0.15s[0m
-Exception in thread "pool-7-thread-17" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:06:21 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:21 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 43m 53.585s)[0m
-2025.03.01 13:06:21 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:21 INFO  time: compiled tutorial-1_f4dd477a3a in 89ms[0m
-2025.03.01 13:06:21 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:21 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 43m 53.781s)[0m
-2025.03.01 13:06:21 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:21 INFO  time: compiled tutorial-1_f4dd477a3a in 96ms[0m
-Exception in thread "pool-7-thread-18" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:06:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:49 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 44m 21.424s)[0m
-2025.03.01 13:06:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:49 INFO  time: compiled tutorial-1_f4dd477a3a in 87ms[0m
-2025.03.01 13:06:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:49 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 44m 21.602s)[0m
-2025.03.01 13:06:49 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:06:49 INFO  time: compiled tutorial-1_f4dd477a3a in 78ms[0m
-Exception in thread "pool-7-thread-19" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:07:10 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:07:10 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 44m 42.622s)[0m
-2025.03.01 13:07:10 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:07:10 INFO  time: compiled tutorial-1_f4dd477a3a in 95ms[0m
-Exception in thread "pool-7-thread-20" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:09:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:09:45 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 47m 18.097s)[0m
-2025.03.01 13:09:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:09:45 INFO  time: compiled tutorial-1_f4dd477a3a in 63ms[0m
-2025.03.01 13:09:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:09:45 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 47m 18.258s)[0m
-2025.03.01 13:09:45 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:09:45 INFO  time: compiled tutorial-1_f4dd477a3a in 56ms[0m
-Exception in thread "pool-7-thread-21" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:23:56 INFO  BSP server: Checking https://repo1.maven.org/maven2/org/scalameta/munit_3/[0m
-2025.03.01 13:23:56 INFO  BSP server: Checked https://repo1.maven.org/maven2/org/scalameta/munit_3/[0m
-2025.03.01 13:23:56 INFO  BSP server: Checking https://repo1.maven.org/maven2/org/scalameta/munit_3/[0m
-2025.03.01 13:23:56 INFO  BSP server: Checked https://repo1.maven.org/maven2/org/scalameta/munit_3/[0m
-2025.03.01 13:23:56 INFO  BSP server: Checking https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml[0m
-2025.03.01 13:23:56 INFO  BSP server: Checked https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml[0m
-2025.03.01 13:23:56 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:23:56 INFO  time: compiled tutorial-1_f4dd477a3a in 0.21s[0m
-Exception in thread "pool-7-thread-22" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:23:56 INFO  BSP server: Checking https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml[0m
-2025.03.01 13:23:56 INFO  BSP server: Checked https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml[0m
-2025.03.01 13:24:14 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:24:14 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 1h 1m 46.702s)[0m
-2025.03.01 13:24:14 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:24:14 INFO  time: compiled tutorial-1_f4dd477a3a in 0.1s[0m
-Exception in thread "pool-7-thread-23" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:27:09 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:27:09 INFO  Deduplicating compilation of tutorial-1_f4dd477a3a from bsp client 'scala-cli 1.5.0' (since 1h 4m 42.311s)[0m
-2025.03.01 13:27:09 INFO  compiling tutorial-1_f4dd477a3a (1 scala source)[0m
-2025.03.01 13:27:09 INFO  time: compiled tutorial-1_f4dd477a3a in 0.17s[0m
-Exception in thread "pool-7-thread-24" java.lang.InterruptedException
-	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
-	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:244)
-	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.01 13:49:22 INFO  Shutting down server[0m
-2025.03.01 13:49:22 INFO  shutting down Metals[0m
-2025.03.01 13:49:22 INFO  Shut down connection with build server.[0m
-2025.03.01 13:49:22 INFO  Cancelling compilation on scala-cli server[0m
-java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@73390242[Shutting down, pool size = 3, active threads = 3, queued tasks = 0, completed tasks = 40533]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
-	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
-	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
-	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
-	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
-	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
-	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
-	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
-	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@73390242[Shutting down, pool size = 3, active threads = 3, queued tasks = 0, completed tasks = 40533]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
-	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
-	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
-	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
-	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
-	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
-	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
-	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
-	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-2025.03.02 13:24:52 INFO  Started: Metals version 1.5.1 in folders '/home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1' for client Neovim 0.10.4+v0.10.4.[0m
-2025.03.02 13:24:55 INFO  no build target found for /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/src/main/scala/cosc250/firststeps/StepOne.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
-2025.03.02 13:24:55 INFO  Attempting to connect to the build server...[0m
-2025.03.02 13:24:55 INFO  Running BSP server List(/usr/bin/scala-cli, bsp, --json-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-options-v2.json, --json-launcher-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-launcher-options.json, --envs-file, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-envs.json, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1)[0m
-2025.03.02 13:24:55 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/bsp.trace.json or /home/lenny/.cache/metals/bsp.trace.json[0m
-2025.03.02 13:24:56 INFO  time: Connected to build server in 0.57s[0m
-2025.03.02 13:24:56 INFO  Connected to Build server: scala-cli v1.5.0[0m
-2025.03.02 13:24:55 INFO  running doctor check[0m
-2025.03.02 13:24:55 INFO  java targets: tutorial-1_f4dd477a3a, tutorial-1_f4dd477a3a-test[0m
-2025.03.02 13:24:57 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.02 13:24:57 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
-2025.03.02 13:24:57 INFO  time: indexed workspace in 1.66s[0m
-Mar 02, 2025 1:25:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
-WARNING: Unmatched cancel notification for request id 2
-2025.03.02 13:25:07 INFO  Shutting down server[0m
-2025.03.02 13:25:07 INFO  shutting down Metals[0m
-2025.03.02 13:25:07 INFO  Shut down connection with build server.[0m
-2025.03.02 13:25:07 INFO  BSP server: Mar 02, 2025 1:25:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification[0m
-2025.03.02 13:25:07 INFO  BSP server: WARNING: Notification threw an exception: {[0m
-2025.03.02 13:25:07 INFO  BSP server:   "jsonrpc": "2.0",[0m
-2025.03.02 13:25:07 INFO  BSP server:   "method": "build/exit",[0m
-2025.03.02 13:25:07 INFO  BSP server:   "params": null[0m
-2025.03.02 13:25:07 INFO  BSP server: }[0m
-2025.03.02 13:25:07 INFO  BSP server: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)[0m
-2025.03.02 13:25:07 INFO  BSP server: Caused by: java.lang.reflect.InvocationTargetException[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	... 13 more[0m
-2025.03.02 13:25:07 INFO  BSP server: Caused by: java.lang.RuntimeException: BSP server not initialized yet[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at scala.sys.package$.error(package.scala:27)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at scala.build.bsp.BloopSession$Reference.get(BloopSession.scala:70)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at scala.build.bsp.BspImpl.$anonfun$11(BspImpl.scala:474)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	at scala.build.bsp.BuildServerProxy.onBuildExit(BuildServerProxy.scala:29)[0m
-2025.03.02 13:25:07 INFO  BSP server: 	... 15 more[0m
-2025.03.02 13:25:07 INFO  BSP server: [0m
+2025.03.04 08:25:06 INFO  Started: Metals version 1.5.1 in folders '/home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1' for client Neovim 0.10.4+v0.10.4.[0m
+2025.03.04 08:25:07 INFO  no build target found for /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/src/main/scala/cosc250/firststeps/StepOne.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2025.03.04 08:25:07 INFO  Attempting to connect to the build server...[0m
+2025.03.04 08:25:07 INFO  Running BSP server List(/usr/bin/scala-cli, bsp, --json-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-options-v2.json, --json-launcher-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-launcher-options.json, --envs-file, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-envs.json, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1)[0m
+2025.03.04 08:25:07 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/bsp.trace.json or /home/lenny/.cache/metals/bsp.trace.json[0m
+2025.03.04 08:25:07 INFO  time: Connected to build server in 0.59s[0m
+2025.03.04 08:25:07 INFO  Connected to Build server: scala-cli v1.6.2[0m
+2025.03.04 08:25:07 INFO  running doctor check[0m
+2025.03.04 08:25:07 INFO  java targets: tutorial-1_d5c0a6989e-test, tutorial-1_d5c0a6989e[0m
+2025.03.04 08:25:07 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:25:09 INFO  time: compiled tutorial-1_d5c0a6989e in 0.56s[0m
+2025.03.04 08:25:09 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:25:09 INFO  time: compiled tutorial-1_d5c0a6989e in 0.43s[0m
+2025.03.04 08:25:10 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
+2025.03.04 08:25:11 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
+2025.03.04 08:25:11 INFO  time: indexed workspace in 3.3s[0m
+2025.03.04 08:25:12 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:25:12 INFO  time: compiled tutorial-1_d5c0a6989e in 0.24s[0m
+2025.03.04 08:25:20 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:25:20 INFO  time: compiled tutorial-1_d5c0a6989e in 0.23s[0m
+2025.03.04 08:26:50 INFO  Shutting down server[0m
+2025.03.04 08:26:50 INFO  shutting down Metals[0m
+2025.03.04 08:26:50 INFO  Shut down connection with build server.[0m
+2025.03.04 08:26:50 INFO  BSP server: Mar 04, 2025 8:26:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification[0m
+2025.03.04 08:26:50 INFO  BSP server: WARNING: Notification threw an exception: {[0m
+2025.03.04 08:26:50 INFO  BSP server:   "jsonrpc": "2.0",[0m
+2025.03.04 08:26:50 INFO  BSP server:   "method": "build/exit",[0m
+2025.03.04 08:26:50 INFO  BSP server:   "params": null[0m
+2025.03.04 08:26:50 INFO  BSP server: }[0m
+2025.03.04 08:26:50 INFO  BSP server: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.lang.Thread.run(Thread.java:833)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:775)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at com.oracle.svm.core.posix.thread.PosixPlatformThreads.pthreadStartRoutine(PosixPlatformThreads.java:203)[0m
+2025.03.04 08:26:50 INFO  BSP server: Caused by: java.lang.reflect.InvocationTargetException[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	... 13 more[0m
+2025.03.04 08:26:50 INFO  BSP server: Caused by: java.lang.RuntimeException: BSP server not initialized yet[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at scala.sys.package$.error(package.scala:27)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at scala.build.bsp.BloopSession$Reference.get(BloopSession.scala:70)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at scala.build.bsp.BspImpl.$anonfun$11(BspImpl.scala:474)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	at scala.build.bsp.BuildServerProxy.onBuildExit(BuildServerProxy.scala:29)[0m
+2025.03.04 08:26:50 INFO  BSP server: 	... 15 more[0m
+2025.03.04 08:26:50 INFO  BSP server: [0m
+2025.03.04 08:28:05 INFO  Started: Metals version 1.5.1 in folders '/home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1' for client Neovim 0.10.4+v0.10.4.[0m
+2025.03.04 08:28:06 INFO  no build target found for /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/src/main/scala/cosc250/firststeps/StepOne.scala. Using presentation compiler with project's scala-library version: 3.3.4[0m
+2025.03.04 08:28:06 INFO  Attempting to connect to the build server...[0m
+2025.03.04 08:28:06 INFO  Running BSP server List(/usr/bin/scala-cli, bsp, --json-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-options-v2.json, --json-launcher-options, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-launcher-options.json, --envs-file, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.scala-build/ide-envs.json, /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1)[0m
+2025.03.04 08:28:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/bsp.trace.json or /home/lenny/.cache/metals/bsp.trace.json[0m
+2025.03.04 08:28:06 INFO  time: Connected to build server in 0.57s[0m
+2025.03.04 08:28:06 INFO  Connected to Build server: scala-cli v1.6.2[0m
+2025.03.04 08:28:06 INFO  running doctor check[0m
+2025.03.04 08:28:06 INFO  java targets: tutorial-1_d5c0a6989e-test, tutorial-1_d5c0a6989e[0m
+2025.03.04 08:28:06 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:28:07 INFO  time: compiled tutorial-1_d5c0a6989e in 0.43s[0m
+2025.03.04 08:28:07 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:28:07 INFO  time: compiled tutorial-1_d5c0a6989e in 0.36s[0m
+2025.03.04 08:28:08 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
+2025.03.04 08:28:08 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk/src.zip, /usr/lib/jvm/java-17-openjdk/lib/src.zip. Java symbols will not be available.[0m
+2025.03.04 08:28:08 INFO  time: indexed workspace in 2.2s[0m
+2025.03.04 08:28:09 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:28:09 INFO  time: compiled tutorial-1_d5c0a6989e in 0.23s[0m
+2025.03.04 08:28:09 INFO  compiling tutorial-1_d5c0a6989e (1 scala source)[0m
+2025.03.04 08:28:09 INFO  time: compiled tutorial-1_d5c0a6989e in 0.23s[0m
+2025.03.04 08:29:53 INFO  Shutting down server[0m
+2025.03.04 08:29:53 INFO  shutting down Metals[0m
+2025.03.04 08:29:53 INFO  Shut down connection with build server.[0m

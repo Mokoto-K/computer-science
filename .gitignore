@@ -1,3 +1,7 @@
 *.mp4
 textbooks/
 
+.metals/
+.bsp/
+.scala-build/
+.DS_Store/

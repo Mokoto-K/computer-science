@@ -45,7 +45,7 @@ import scala.compiletime.ops.double
   * (Because there is more than one main method available, the Scala runner will ask you to give it the "interactive" flag to choose
   * e.g. "scala run . --interactive" or "scala-cli run . --interactive")
   */
-@main def exercise1():Unit = {
+@main p def exercise1():Unit = {
 
   print("""
          |Hello from your friendly exercise start-up message! If you see this message printed at the 
