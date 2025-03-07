@@ -43,7 +43,7 @@ object NonTail {
   // Puzzle: try calling it with a large number - say 100. What breaks?
   // (Comment out this line, and then run the tests. The println will be run as part of the object
   // initialisation for the NonTail object)
-  println(fibonacci(100))
+  // println(fibonacci(100))
 
 
   /**
