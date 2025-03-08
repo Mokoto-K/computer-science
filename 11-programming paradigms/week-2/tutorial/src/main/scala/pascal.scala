@@ -30,5 +30,7 @@ def pascal(n:Int):List[Int] = {
   }
 
   // Now write the body of pascal(n)
-  ???
-  }
+  
+  pascal(n-1)
+
+}

@@ -62,4 +62,4 @@ CREATE TABLE works_on (
 );
 
 
-  
+SELECT fname, minit, lname FROM employee  

@@ -39,3 +39,6 @@ Caused by: java.lang.InterruptedException: sleep interrupted
 	at java.base/java.lang.Thread.sleep(Native Method)
 	at org.h2.store.FileLock.sleep(FileLock.java:422)
 	... 28 more
+2025-03-08 14:35:22.761058+10:00 database: opening /home/lenny/server/computer-science/11-programming paradigms/tutorials/tutorial-1/.metals/metals
+org.h2.message.DbException: Error opening database: "Sleep interrupted" [8000-232]
+	at org.h2.message.DbException.get(DbException.java:212)
