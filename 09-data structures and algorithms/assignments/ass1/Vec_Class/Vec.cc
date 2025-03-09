@@ -1,7 +1,5 @@
 // Vec.cc
 #include "Vec.h"
-#include <algorithm>
-#include <iostream> // remove this before submission
 using namespace std;
 
 Vec::Vec() {
@@ -67,34 +65,35 @@ double& Vec::operator[](int i) {
 }
 
 void Vec::push_back(const double& a) {
-
-    if (array_current_size == array_limit)
+ 
+    // check if we need to resize the array
+    if (array_current_size == array_limit) {
         grow();
+    }
 
+    // Add the new element and update the array size
     pointer_to_data[array_current_size] = a;
-    array_current_size++;
+    array_current_size += 1;
 
 }
 
 void Vec::grow() {
     
-    // Expand current array size
+    // allocate a new array with twice the original space
     if (array_limit == 0)
-        array_limit = 1;
-    else
+        array_limit = 1; 
+    else 
         array_limit *= 2;
-   
-    // Create a new array with double the previous size 
-    Vec new_array(array_limit);
 
+    double* new_array = new double[array_limit];
+    
+    // copy existing array elements into the new array 
     for (int i = 0; i < array_current_size; i++)
-        new_array.pointer_to_data[i] = pointer_to_data[i];
+        new_array[i] = pointer_to_data[i];
 
+    // free space from the old array 
     delete[] pointer_to_data;
 
-    pointer_to_data = new_array.pointer_to_data;
-    
-
-    
-
+    // assign new values to the member vars
+    pointer_to_data = new_array;
 }

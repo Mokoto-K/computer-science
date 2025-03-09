@@ -16,13 +16,13 @@ object Challenge1 {
     use the inbuilt reverse method on Lists.
    */
   def isPalindrome[T](list:List[T]):Boolean = {
-    var palindrome: Boolean = false
-    val list2electricboogaloo = list.reverse 
+    var result: Boolean = false
+    val reversedList = list.reverse 
 
-    if (list2electricboogaloo == list)
-      palindrome = true
+    if (reversedList == list)
+      result = true
 
-    palindrome
+    result  
   }
 
   /** 
@@ -34,7 +34,16 @@ object Challenge1 {
     You will find list.zipWithIndex and list.forall useful
    */
   def entriesBiggerThanIndex(list:List[Int]):Boolean = {
-    ???
+    var i:Int = 0
+    var result:Boolean = true
+
+    while(i < list.size) do 
+      if (i > list(i))
+        result = false
+
+      i += 1 
+
+    result
   }
 
 
