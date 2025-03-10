@@ -1,21 +1,149 @@
-def repeat[T](list:List[T]):List[T] = 
-  list match
-    case Nil => Nil 
-    case h :: tail => h :: h :: repeat(tail)
+// functional programming
+import java.awt.Rectangle
+import scala.compiletime.ops.double
+def doubleList(list: List[Int]): List[Int] = 
+  list.map(x => x * 2)
 
-def alternate[T](list:List[T]):List[T] = 
-  list match 
-    case Nil => Nil
-    case h :: Nil => Nil 
-    case a :: b :: tail => b :: alternate(tail)
+
+def countElements(list: List[Int]): Int = 
+  if list.isEmpty then 0
+  else 1 + countElements(list.tail) 
+
+
+def sumElements(list :List[Int]): Int = 
+  if list.isEmpty then 0
+  else list.head + sumElements(list.tail)
+
+
+def factorial(n: Int): Int = 
+  if n == 0 then 1 else n * factorial(n - 1)
+
+
+def describe(x: Any): String = x match 
+  case 0 => "zero"
+  case 1 => "one"
+  case "hello" => "a greeting"
+  case _ => "something else"
+
+
+case class Person(name: String, age: Int)
+
+def greet(person: Person): String = person match
+  case Person("Alice", _) => "Hello alice"
+  case Person(name, age) if age < 18 => s"Hello, young $name"
+  case Person(name, age) => s"Hello, $name, age $age"
+
+
+sealed trait Shape
+
+case class Circle(radius: Double) extends Shape 
+case class Rectangle(width: Double, height: Double) extends Shape 
+
+def area(shape: Shape): Double = shape match
+  case Circle(r) => Math.PI * r * r
+  case Rectangle(w, h) => w * h 
+
+
+// sealed trait MyList
+//
+// case object Empty extends MyList 
+//
+// case class Cons(head: Int, tail: MyList) extends MyList
+//
+// def sum(list: MyList): Int = list match 
+//   case Empty => 0
+//   case Cons(h, t) => h + sum(t)
+//
+// def count(list: MyList): Int = list match
+//   case Empty => 0
+//   case Cons(h, t) => 1 + count(t)
+
+def twice(x: Int): Int = x * 2 
+
+sealed trait IntList:
+  def map(f: Int => Int): IntList = this match
+    case Empty => Empty
+    case Cons(head, tail) => Cons(f(head), tail.map(f))
+
+case object Empty extends IntList
+case class Cons(head: Int, tail: IntList) extends IntList
 
 @main
-def main() = {
+def run() = {
+  
+  // val list = Cons(1, Cons(2, Cons(3, Empty)))
+  // println(list.map(twice))
+  
+  val names = List("a", "b", "c", "d", "e", "f")
+  println(names.zipWithIndex)
 
-  println(repeat(List(1, 2, 3)))
-  println(alternate(List(1,2,3,4,5,6)))
-}
+  def timesPostion(arr: Array[Int]): Array[Int] = 
+    arr.zipWithIndex.map((a, i) => a * i)
 
+  println(timesPostion(Array(5,5,5)).toList)
+
+  def multiplyBy(x: Int): Int => Int = (y: Int) => x * y 
+
+
+  val double = multiplyBy(2)
+  twice(7)
+  double(7)
+
+
+
+
+
+
+
+
+  // val myList = Cons(1, Cons(2, Cons(3, Empty)))
+
+  // val c = Circle(5)
+  // val r = Rectangle(2, 3)
+  //
+  // println(area(c))
+  // println(area(r))
+  //
+  //
+  // val list = List(1,2,3,4,5)
+  //
+  //
+  // // val list2 = doubleList(list)
+  // val list2 = sumElements(list)
+  // println(list2)
+  //
+  // println(factorial(5))
+  //
+  // println(describe(0))
+  // println(describe(1))
+  // println(describe("hello"))
+  // println(describe("purple"))
+  //
+  // println(greet(Person("Alice", 18)))
+  // println(greet(Person("Bob", 17)))
+  // println(greet(Person("Poop", 18)))
+
+} 
+
+
+// def repeat[T](list:List[T]):List[T] = 
+//   list match
+//     case Nil => Nil 
+//     case h :: tail => h :: h :: repeat(tail)
+//
+// def alternate[T](list:List[T]):List[T] = 
+//   list match 
+//     case Nil => Nil
+//     case h :: Nil => Nil 
+//     case a :: b :: tail => b :: alternate(tail)
+//
+// @main
+// def main() = {
+//
+//   println(repeat(List(1, 2, 3)))
+//   println(alternate(List(1,2,3,4,5,6)))
+// }
+//
 // import scala.annotation.tailrec
 //
 // sealed trait IntList:
@@ -49,7 +177,7 @@ def main() = {
 //   myList(2)
 //   myList.length
 // }
-
+//
 // def describe(card:Card):String = card match 
 //   case Card(1, Spade) => "Old Frizzle"
 //   case Card(1, _) => "An ace"
