@@ -16,13 +16,9 @@ object Challenge1 {
     use the inbuilt reverse method on Lists.
    */
   def isPalindrome[T](list:List[T]):Boolean = {
-    var result: Boolean = false
-    val reversedList = list.reverse 
 
-    if (reversedList == list)
-      result = true
+    if (list == list.reverse) true else false 
 
-    result  
   }
 
   /** 
@@ -34,16 +30,9 @@ object Challenge1 {
     You will find list.zipWithIndex and list.forall useful
    */
   def entriesBiggerThanIndex(list:List[Int]):Boolean = {
-    var i:Int = 0
-    var result:Boolean = true
-
-    while(i < list.size) do 
-      if (i > list(i))
-        result = false
-
-      i += 1 
-
-    result
+    
+    list.zipWithIndex.forall(tuple => tuple._1 > tuple._2) 
+    
   }
 
 
@@ -56,7 +45,11 @@ object Challenge1 {
     You might also find it helpful to print out an intermediate result
   */
   def secondPalindrome[T](list:List[T]):Boolean = {
-    ???
+
+    // Reusing isPalindrome from above "cus we functional like dat"
+    isPalindrome(list.zipWithIndex.filter(tuple => tuple._2 % 2 != 0).map(_._1))
+
   }
 
 }
+

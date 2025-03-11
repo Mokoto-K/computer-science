@@ -68,27 +68,64 @@ sealed trait IntList:
 case object Empty extends IntList
 case class Cons(head: Int, tail: IntList) extends IntList
 
+
+
+
+
+
+
+
 @main
 def run() = {
+
+  val list = List(1,2,1,2)
+
+  println(list.zipWithIndex)
+
+
+  def isPalindrome[T](list:List[T]):Boolean = {
+
+    if (list == list.reverse) true else false 
+
+  }
+
+  println(
+
+    isPalindrome(list.zipWithIndex.filter(t => t._2 % 2 != 0).map(_._1)) 
+  )
+
+
+  def letterScore(char:Char):Int = { char match
+    case 'AEIOULNSTR' => 1
+    case char.contain("DG") => 2 
+    case char.contain("BCMP") => 3
+    case char.contain("FHVWY") => 4
+    case char.contain("K") => 5
+    case char.contain("JX") => 8
+    case char.contain("QZ") => 10
+  }
+
+  println(letterScore("F")
+
   
   // val list = Cons(1, Cons(2, Cons(3, Empty)))
   // println(list.map(twice))
   
-  val names = List("a", "b", "c", "d", "e", "f")
-  println(names.zipWithIndex)
-
-  def timesPostion(arr: Array[Int]): Array[Int] = 
-    arr.zipWithIndex.map((a, i) => a * i)
-
-  println(timesPostion(Array(5,5,5)).toList)
-
-  def multiplyBy(x: Int): Int => Int = (y: Int) => x * y 
-
-
-  val double = multiplyBy(2)
-  twice(7)
-  double(7)
-
+  // val names = List("a", "b", "c", "d", "e", "f")
+  // println(names.zipWithIndex)
+  //
+  // def timesPostion(arr: Array[Int]): Array[Int] = 
+  //   arr.zipWithIndex.map((a, i) => a * i)
+  //
+  // println(timesPostion(Array(5,5,5)).toList)
+  //
+  // def multiplyBy(x: Int): Int => Int = (y: Int) => x * y 
+  //
+  //
+  // val double = multiplyBy(2)
+  // twice(7)
+  // double(7)
+  //
 
 
 

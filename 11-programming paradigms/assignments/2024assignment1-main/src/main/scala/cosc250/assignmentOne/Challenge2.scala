@@ -36,8 +36,14 @@ object Challenge2 {
   *
   * You might find using "mystring".contains(char) useful to keep it short
   */
-  def letterScore(char:Char):Int = {
-    ???
+  def letterScore(char:Char):Int = { charercom09jkjkjkjkjkjkjkjmatch
+    case "AEIOULNSTR" => 1
+    case char.contain("DG") => 2 
+    case char.contain("BCMP") => 3
+    case char.contain("FHVWY") => 4
+    case char.contain("K") => 5
+    case char.contain("JX") => 8
+    case char.contain("QZ") => 10
   }
 
   /**
