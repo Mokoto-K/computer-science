@@ -36,14 +36,15 @@ object Challenge2 {
   *
   * You might find using "mystring".contains(char) useful to keep it short
   */
-  def letterScore(char:Char):Int = { charercom09jkjkjkjkjkjkjkjmatch
-    case "AEIOULNSTR" => 1
-    case char.contain("DG") => 2 
-    case char.contain("BCMP") => 3
-    case char.contain("FHVWY") => 4
-    case char.contain("K") => 5
-    case char.contain("JX") => 8
-    case char.contain("QZ") => 10
+  def letterScore(char:Char):Int = { 
+    char match  
+      case c if "AEIOULNSTR".contains(c) => 1
+      case c if "DG".contains(c) => 2 
+      case c if "BCMP".contains(c) => 3
+      case c if "FHVWY".contains(c) => 4
+      case c if "K".contains(c) => 5
+      case c if "JX".contains(c) => 8
+      case c if "QZ".contains(c) => 10
   }
 
   /**
@@ -51,7 +52,11 @@ object Challenge2 {
     * Don't forget - DoubleWordScores etc affect the word as a whole, not individual letters
     */
   def letterAndSquareScore(char:Char, sq:Square):Int = {
-    ???
+    sq match 
+      case OrdinarySquare => letterScore(char) // Not sure if i need this since _  
+      case DoubleLetterScore => letterScore(char) * 2 
+      case TripleLetterScore => letterScore(char) * 3 
+      case _ => letterScore(char)
   }
 
   /** 
@@ -63,8 +68,11 @@ object Challenge2 {
 
     Hint: If you produce a Seq[Int] you can call seq.sum on it.
     */
+  
   def totalLetterScore(word:String, squares:Seq[Square]):Int = {
-    ???
+    word.zip(squares).map { 
+      case (char, sq) => letterAndSquareScore(char, sq)
+      }.sum
   }
 
   /**
@@ -74,7 +82,14 @@ object Challenge2 {
     squares, the multiplier will be 3 * 3 * 2 = 18
     */
   def scrabbleScore(word:String, squares:Seq[Square]):Int = {
-    ???
+    var multiplier: Int = squares.foldLeft(1) {
+      case (accum, DoubleWordScore) => accum * 2 
+      case (accum, TripleWordScore) => accum * 3
+      case (accum, _) => accum * 1
+    }
+
+    totalLetterScore(word, squares) * multiplier
+    
   }
 
 }
