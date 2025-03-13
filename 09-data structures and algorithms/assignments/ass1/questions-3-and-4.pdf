@@ -37,6 +37,28 @@ case we can see that:
 T(n) = n^2 + n, we take the leading term and get O(n^2) for our worst case.
 
 
-We assume the kth smallest 
-
 Question 4
+
+Since the key is always found exactly in the middle of the array of n lenght 
+(assuming an odd numbered array) we can say that:
+
+i = (n + 1) / 2 
+
+Xi = 1 if i 
+     0 otherwise
+
+The only position that has a probability of 1 is the middle and every other position 
+has a probability of 0 therefore:
+
+E[Xi] = 1 * (n + 1) / 2 
+      = (n + 1) / 2 
+
+This will always be the average number of cases (n + 1 / 2 comparisons) as the key 
+is always found in the middle of the array. This translates to O(n) for an asymtotic 
+analysis when we remove any constants.
+
+
+
+
+
+

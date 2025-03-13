@@ -22,10 +22,10 @@ object Challenge3 {
   type Candidate = Seq[Position]
 
   /** Are two positions in the same row? */
-  def sameRow(p1:Position, p2:Position):Boolean = ???
+  def sameRow(p1:Position, p2:Position):Boolean = if (p1._2 == p2._2) true else false
 
   /** Are two positions in the same column? */
-  def sameCol(p1:Position, p2:Position):Boolean = ???
+  def sameCol(p1:Position, p2:Position):Boolean = if (p1._1 == p2._1) true else false
 
   /** 
    Are two positions on the same diagonal? 
@@ -34,7 +34,8 @@ object Challenge3 {
     Hint: Think about the difference in their coordinates.
   */
   def sameDiagonal(p1:Position, p2:Position):Boolean = {
-    ???
+    ??? 
+    if (Math.abs(p1._1 - p2._1) == 1 && Math.abs(p1._2 - p2._2) == 1) true else false 
   }
 
   /**
