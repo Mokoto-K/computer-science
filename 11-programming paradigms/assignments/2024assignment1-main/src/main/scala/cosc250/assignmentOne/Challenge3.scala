@@ -22,10 +22,10 @@ object Challenge3 {
   type Candidate = Seq[Position]
 
   /** Are two positions in the same row? */
-  def sameRow(p1:Position, p2:Position):Boolean = if (p1._2 == p2._2) true else false
+  def sameRow(p1:Position, p2:Position):Boolean = p1._2 == p2._2
 
   /** Are two positions in the same column? */
-  def sameCol(p1:Position, p2:Position):Boolean = if (p1._1 == p2._1) true else false
+  def sameCol(p1:Position, p2:Position):Boolean = p1._1 == p2._1
 
   /** 
    Are two positions on the same diagonal? 
@@ -34,8 +34,8 @@ object Challenge3 {
     Hint: Think about the difference in their coordinates.
   */
   def sameDiagonal(p1:Position, p2:Position):Boolean = {
-    ??? 
-    if (Math.abs(p1._1 - p2._1) == 1 && Math.abs(p1._2 - p2._2) == 1) true else false 
+    
+    Math.abs(p1._1 - p2._1) == Math.abs(p1._2 - p2._2)
   }
 
   /**
@@ -43,7 +43,7 @@ object Challenge3 {
     Don't forget a queen cannot attack itself. ie, (4,4) is not attacking (4,4)
   */
   def attackingEachOther(p1:Position, p2:Position):Boolean = {
-    ???
+    (p1 != p2 && (sameRow(p1, p2) | sameCol(p1, p2) | sameDiagonal(p1, p2))) 
   }
 
   /**

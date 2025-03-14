@@ -199,32 +199,110 @@ def run() = {
   
   describe(Card(11, Clubs))
 
+//----------------------------------------------------
+// Singly linked lists
+
+sealed trait IntList
+  def head: Int 
+  def tail: IntList 
+  
+  def map(f: Int => Int): IntList = 
+    this match 
+      case Empty => Empty
+      case Cons(head, tail) => Cons(f(head), tail.map(f))      
+
+  def filter(f: Int => Boolean): IntList = 
+    this match 
+      case Empty => Empty
+      case Cons(head, tail) if f(head) => Cons(head, tail.filter(f))
+      case Cons(head, tail) => tail.filter(f)
+
+  def exist(f: Int => Boolean): Boolean = 
+    this match 
+      case Empty => Empty
+      case Cons(head, tail) if f(head) => true 
+      case Cons(head, tail) => tail.exist(f) 
+
+  def forall(f: Int => Boolean): Boolean =
+    !exist(!f(_))
+
+  def length: Int = 
+    this match 
+      case Empty => 0
+      case Cons(_, tail) => 1 + tail.length 
+  
+  @tailrec
+  final def apply(index: Int): Int = 
+    this match
+      case Empty => throw new IndexOutOfBoundsException()
+      case Cons(h, tail) => if index == 0 then h else tail.apply(index - 1)
+
+case object Empty extends IntList {
+  def head: Int = throw new NoSuchElementException()
+  def tail: IntList = throw new NoSuchElementException()
+}
+case class Cons(head: Int, tail: IntList) extends IntList
 
 
 
+val myList: IntList = Cons(1, Cons(2, Cons(3, Empty)))
+mylist.filter((x) => x % 2 == 0)
+
+
+//-------------------------------------------------------
+// Higher order fuinctions
+
+def twice(i: Int): Int = 2 * i 
+def thrice(i: Int): Int = 3 * i 
 
 
 
+val t: Int = twice
+t(8) // == 16 
+
+
+// def runIt(f: Int => Int): Unit = 
+
+// MAP 
+
+val list123 = Cons(1, Cons(2, Cons(3, Empty)))
+
+list123.map(twice)
 
 
 
+val strings = List("a", "b", "c", "e", "f")
+
+val list: List[Int] = List(1,2,3,4,5)
+list.map((x) => x * 3)
+list.map(_ * 3)
+
+list.map[String]((x) => strings(x))
 
 
+def timesPosition(arr: Array[Int]): Array[Int] = 
+  arr.zipWithIndex.map((a, i) => a * i)
 
 
+def multiplyBy(x: Int): Int => Int = { (y: Int) => x * y }
+val double = multiplyBy(2)
+double(7) // == 14
+multiplyBy(2)(7) // == 14 
 
 
+// FILTER
 
+(1 to 10).toList // 1,2,3,4,5,6,7,8,9,10 
+(1 until 10).toList // 1,2,3,4,5,6,7,8,9 
 
+(1 to 10).filter(_ % 2 == 0) // evens 
 
+def prime(x: Int): Boolean = 
+  x > 1 && 
+  !(2 until x).exists((y) => x % y == 0)
 
-
-
-
-
-
-
-
-
+prime(2) // false 
+prime(7) // true
 
 }
+
