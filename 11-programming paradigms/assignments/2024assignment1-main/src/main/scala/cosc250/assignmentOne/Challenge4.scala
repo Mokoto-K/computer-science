@@ -39,7 +39,7 @@ object Challenge4 {
     Don't worry about duplicate entries.
     */
   def inverse[K, V](map:Map[K,V]):Map[V, K] = {
-    ???
+    map.map((v, i) => (i, v))
   }
 
   /**

@@ -51,7 +51,7 @@ object Challenge3 {
     there are any queens attacking each other
     */
   def seqContainsAttack(queens:Seq[Position]):Boolean = {
-    ???
+    queens.exists(p1 => queens.exists(p2 => attackingEachOther(p1, p2)))
   }
 
   /**
@@ -59,7 +59,7 @@ object Challenge3 {
     Write a function to check if a solution is valid
     */
   def isValid(queens:Seq[Position]):Boolean = {
-    ???
+    (queens.length == 8 && !seqContainsAttack(queens))
   }
 
   /**
@@ -71,7 +71,7 @@ object Challenge3 {
     positions, eg Seq((0, 1), (1, 8), (2, 2), (3, 7))
     */
   def expandShortHand(queens:Seq[Int]):Seq[Position] = {
-    ???
+    queens.zipWithIndex.map((v, i) => (i, v)) 
   }
 
   /**
@@ -80,7 +80,7 @@ object Challenge3 {
     Reminder: Seq[Candidate] is an alias for Seq[Seq[(Int,Int)]]
     */
   def filterCandidates(candidates:Seq[Candidate]):Seq[Candidate] = {
-    ???
+    candidates.filter((x) => seqContainsAttack(x) == false)
   }
 
   /**

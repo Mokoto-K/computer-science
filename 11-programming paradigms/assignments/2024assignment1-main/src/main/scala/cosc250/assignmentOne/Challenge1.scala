@@ -47,7 +47,7 @@ object Challenge1 {
   def secondPalindrome[T](list:List[T]):Boolean = {
 
     // Reusing isPalindrome from above "cus we functional like dat"
-    isPalindrome(list.zipWithIndex.filter((v, i) => i % 2 != 0).map(v))
+    isPalindrome(list.zipWithIndex.filter(tuple => tuple._2 % 2 != 0).map(_._1))
 
   }
 

@@ -304,5 +304,34 @@ def prime(x: Int): Boolean =
 prime(2) // false 
 prime(7) // true
 
+
+// FOrs
+
+for { i <- 1 to 100 } yield i * 2 
+(1 to 100).map(_ * 2)
+
+list123.map(_ * 3)
+
+for i <- list123 yield i * 3 
+
+val list1 = List(1,2,3,4,5)
+val list2 = List("a","b","c","d","e")
+
+// Basically a nested for loop
+for 
+  num <- list1 
+  string <- list2
+  yield s"$num $string"
+
+
+def matchingLetters(wordA: String, wordB: String): List[(Int, Int)] = 
+  (for 
+    (a, i) <- wordA.zipWithIndex
+    (b, j) <- wordB.zipWithIndex
+    if a == b 
+    yield i -> j).toList
+
+
+(0 until 9).foldLeft(0)(_ + _)
 }
 
