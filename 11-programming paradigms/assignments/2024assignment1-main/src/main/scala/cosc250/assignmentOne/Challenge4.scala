@@ -61,8 +61,11 @@ object Challenge4 {
 
     Produce a vignere table as a Map[Int,String]
     */
-  def vignereTable:Map[Int, String] = {      
-    ???
+  def vignereTable:Map[Int, String] = {
+    (0 until 26).map { 
+      key => val value = alpha.slice(key, 26) ++ alpha.slice(0, key)
+      key -> value 
+    }.toMap
   }
 
   /**
@@ -77,7 +80,7 @@ object Challenge4 {
     Hint: String has a toSeq method that will convert it into a Seq[Char]
     */
   def letterToNum(key:String):Seq[Int] = {
-    ???
+    key.map(letter => alpha.indexOf(letter)).toSeq
   }
 
   /**

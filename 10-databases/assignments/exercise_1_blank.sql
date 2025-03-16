@@ -1,3 +1,11 @@
+-- It was ambiguous as to if we were meant to add a CREATE db line as well in 
+-- this assignment, so i chose to add a DROP line instead of out right doing it or 
+-- leaving it out.
+DROP DATABASE IF EXISTS username_moviedirect;
+CREATE DATABASE username_moviedirect;
+
+\c username_moviedirect
+
 CREATE TABLE customers (
     customer_id INTEGER PRIMARY KEY, 
     last_name   VARCHAR(50) NOT NULL,
@@ -37,7 +45,7 @@ CREATE TABLE shipments (
     shipment_id   INTEGER PRIMARY KEY,
     customer_id   INTEGER NOT NULL,
     movie_id      INTEGER NOT NULL,
-    media_type    VARCHAR(20),
+    media_type    VARCHAR(20) NOT NULL,
     shipment_date DATE,
     FOREIGN KEY (movie_id, media_type) REFERENCES stock(movie_id, media_type)
         ON DELETE CASCADE ON UPDATE CASCADE, 

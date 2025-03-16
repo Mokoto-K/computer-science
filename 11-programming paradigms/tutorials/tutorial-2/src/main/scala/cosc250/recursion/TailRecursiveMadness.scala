@@ -22,9 +22,8 @@ object NonTail {
     * factorial(n) is 1 * 2 * 3 * ... n
     */
   def factorial(n:Int):Int = {
-    if (n == 1) 1 else n * factorial(n - 1)
+    if (n == 1) 1 else n * factorial(n - 1) 
   }
-
 
   /**
     * The Fibonacci sequence begins
@@ -37,9 +36,7 @@ object NonTail {
     * But unlike Int, summing BigInts has no maximum value.
     */
   def fibonacci(n:Int):BigInt = {
-    if (n == 0) BigInt(0)
-    else if (n == 1) BigInt(1)
-    else fibonacci(n - 1) + fibonacci(n - 2)
+    if (n == 0) 0 else if (n == 1) 1 else fibonacci(n - 1) + fibonacci(n -2) 
   }
 
   // Puzzle: try calling it with a large number - say 100. What breaks?
@@ -75,17 +72,15 @@ object NonTail {
         case Nil => Nil
       }
     }
-
-    // Now write the body of pascal(n)
-    if (n == 0) List(1)
-    else {
-      val prev = pascal(n - 1)
-      val left = 0 +: prev 
-      val right = prev :+ 0
+    
+    if (n == 0) { 
+      List(1)
+    } else {
+      val left = 0 +: pascal(n - 1)
+      val right = pascal(n - 1) :+ 0
       sumPairs(left.zip(right))
     }
-  }
-
+}
 }
 
 object Tail {
@@ -114,9 +109,10 @@ object Tail {
     */
   def factorial(n:Int):Int = {
 
-    @tailrec
+    //@tailrec
     def fac(n:Int, accum:Int):Int = {
-      if (n == 1) accum else fac(n-1, accum*n)
+      if (n == 1) accum else fac(n-1, n * accum)
+      
     }
 
     fac(n, 1) 
@@ -135,14 +131,12 @@ object Tail {
     // then n=k-2, a=1 b=2
     // then n=k-3, a=2 b=3
     // until you reach n=0
-    @tailrec
+    //@tailrec
     def fibInt(n:Int, a:BigInt=0, b:BigInt=1):BigInt = {
-      if (n == 0) a
-      else if (n == 1) b 
-      else fibInt(n-1, b, a + b) 
+      if (n == 1) a + b else fibInt(n-1, a+1, b+2) 
     }
 
-    fibInt(n) 
+     fibInt(n) 
   }
 
   // Try fibonacci(60), but not too large or it will take a really long time.
@@ -170,8 +164,8 @@ object Tail {
 
 
     // I'll let you define the inner tail-recursive function this time.
-     
-    ???
+
+    def innerPas(n: Int, 
   }
 
 }
