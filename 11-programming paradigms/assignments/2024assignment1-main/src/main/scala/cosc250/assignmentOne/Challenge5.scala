@@ -34,7 +34,7 @@ object Challenge5 {
     Hint: Map has a getOrElse method
     */
   def isAlive(p:Position, s:ConwayState):Boolean = {
-    ???
+    s.getOrElse(p, false)
   }
 
 

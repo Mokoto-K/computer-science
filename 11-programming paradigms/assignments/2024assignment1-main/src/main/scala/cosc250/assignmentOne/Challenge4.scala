@@ -62,10 +62,11 @@ object Challenge4 {
     Produce a vignere table as a Map[Int,String]
     */
   def vignereTable:Map[Int, String] = {
-    (0 until 26).map { 
-      key => val value = alpha.slice(key, 26) ++ alpha.slice(0, key)
-      key -> value 
-    }.toMap
+    // the problem with learning scala and functional programming at the same time is...
+    (0 until 26).map(key => key -> (alpha.slice(key, 26) ++ alpha.slice(0, key))).toMap
+
+    // unlike other languages... i'm not sure when a one liner is too much, or when it's 
+    // just "good functional programming bro"
   }
 
   /**
@@ -80,6 +81,7 @@ object Challenge4 {
     Hint: String has a toSeq method that will convert it into a Seq[Char]
     */
   def letterToNum(key:String):Seq[Int] = {
+    // This feels resonable but also, you wouldnt do this in any other language.. i think.
     key.map(letter => alpha.indexOf(letter)).toSeq
   }
 
@@ -110,7 +112,16 @@ object Challenge4 {
           or read up on it on Wikipedia: https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
     */
   def encode(plaintext:String, key:String):String = {
-    ???
+    // This is fairly standard, get the length we need for the key 
+    val repeatedKey = key * ((plaintext.length() / key.length()) + 1)
+
+    // maybe i just suck at it.... but functional programming seems to lead to horrible code 
+    plaintext.zip(letterToNum(repeatedKey)).map((letter, index) => 
+        vignereTable(index)(alpha.indexOf(letter))).mkString
+
+    // that feels messy and clumsy like it needs to be broken up... but myabe its just
+    // "good succinct functional programming"??? Feels more like egyptian hieroglyphics,
+    // a haiku or a python bro trying to write a program in a single line.. but its funcational..
   }
 
   /**
@@ -120,7 +131,11 @@ object Challenge4 {
     and that gives us a character number to look up in the alphabet.
     */
   def decode(cyphertext:String, key:String):String = {
-    ???
+    // if functional coding is so good... why write another function for this? just reuse (en)code... kinda
+    encode(cyphertext, key.map(letter => alpha((26 - alpha.indexOf(letter)) % 26)))
+
+    // maybe i am the problem with functional programming, I haven't yet learnt where 
+    // the line is... I feel i crossed it with this section. Encryption is fun tho...
   }
 
 }

@@ -60,7 +60,9 @@ object Challenge6 {
     Hint: There are no duplicate cards in a hand. You might find the filter method
     on Seq useful.
     */
-  def removeCard(hand:Seq[Card], card:Card):Seq[Card] = ???
+   def removeCard(hand:Seq[Card], card:Card):Seq[Card] = 
+     ??? 
+   
 
   /**
    Write a function that calculates the change in score that is made to a hand by 
