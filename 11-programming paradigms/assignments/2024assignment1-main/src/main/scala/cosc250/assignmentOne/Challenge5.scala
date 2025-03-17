@@ -54,22 +54,32 @@ object Challenge5 {
     First, define a function that given a tuple and a ConwayState will count the number of live neighbours
     */
   def liveNeighbours(pos:Position, state:ConwayState):Int = {
-    ???
+
+    // This feels like i have too much power... like im getting drunker and drunker on figuring out one liners...
+    state.keys.count((x, y) => (x != pos._1 || y != pos._2) && 
+      (math.abs(x - pos._1) <= 1 && math.abs(y - pos._2) <= 1))
+
+    // This has to be a line crossed with functional programming? is this normal or too obscure? i wouldnt know...
   }
 
   /**
     * Next, define a function that determines whether a position should be alive or dead
     */
   def aliveNextTurn(pos:(Int, Int), state:ConwayState):Boolean = {
-    ???
+    // I ran through this the first time and didn't think to solve for cells resurrecting from the ded...
+    (isAlive(pos, state) && liveNeighbours(pos, state) > 1 && liveNeighbours(pos, state) < 4) || 
+    (!isAlive(pos, state) && liveNeighbours(pos, state) == 3)
   }
 
   /**
     * Next, define a function that will compute the next state of the game of life, for a given maximum X and Y
     */
   def nextConwayState(state:ConwayState, maxSize:(Int, Int) = (20, 20)):ConwayState = {
-    ???
+
+    // This took way too long to get right... mainly due to forgetting the game rules.
+    (for {
+    x <- 0 to maxSize._1
+    y <- 0 to maxSize._2 if (aliveNextTurn((x, y), state))
+  } yield (x, y) -> true).toMap
   }
-
-
 }
