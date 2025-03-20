@@ -4,7 +4,7 @@ template<class T>
 class LinkedList {
 
 public:
-    LinkedList() : head(nullptr), next(nullptr) {}
+    LinkedList() : head(nullptr), tail(nullptr) {}
     ~LinkedList();
     
     bool empty();
@@ -13,7 +13,7 @@ public:
     void insert_at_tail(T);
 
 private:
-    Node<T>* head, next;
+    Node<T> *head, *tail;
 };
 
 
@@ -30,18 +30,24 @@ bool LinkedList<T>::empty() {
 
 template<class T>
 T LinkedList<T>::front() {
-    return head->date;
+    return head->data;
 }
 
 template<class T>
 void LinkedList<T>::remove_from_head() {
-    Node<T>* temp = head;
+    if (head == tail)
+        delete tail;
+
+    Node<T>* temp = head; 
     head = head->next;
     delete temp;
 }
 
 template<class T>
 void LinkedList<T>::insert_at_tail(T) {
-    if (head != nullptr)
-
+    Node<T>* temp = head;
+    for ( ; head->next != nullptr; head = head->next)
+        ;
+   tail = head->next;
+   head = temp;
 }
