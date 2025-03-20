@@ -45,7 +45,12 @@ object Challenge6 {
    Use foldLeft to work out the score for a hand
     */
   def processHand(cards:Seq[Card]):Int = {
-    ???
+    cards.foldLeft(0) { 
+      case (score, DoubleScore) => score * 2
+      case (score, NegativeScore) => score * -1
+      case (score, ZeroScore) => score * 0
+      case (score, Add(n)) => score + n
+    }
   }
 
   /**
@@ -60,16 +65,14 @@ object Challenge6 {
     Hint: There are no duplicate cards in a hand. You might find the filter method
     on Seq useful.
     */
-   def removeCard(hand:Seq[Card], card:Card):Seq[Card] = 
-     ??? 
-   
+   def removeCard(hand:Seq[Card], card:Card):Seq[Card] = hand.filter(c => c !=card)
 
   /**
    Write a function that calculates the change in score that is made to a hand by 
     removing a particular card. Eg, if it reduces it by 2 return -2
     */
   def diffFromRemoving(hand:Seq[Card], card:Card):Int = {
-    ???
+    processHand(removeCard(hand, card)) - processHand(hand)
   }
 
   /**
@@ -81,7 +84,7 @@ object Challenge6 {
     Hint: you might find the minBy function on Seq[Int] useful
     */
   def bestCardToRemove(hand:Seq[Card]):Card = {
-    ???
+    hand.minBy(card => diffFromRemoving(hand, card))
   }
 
   /**
@@ -104,7 +107,17 @@ object Challenge6 {
     In which case any of those will do.
     */
   def bestOrder(hand:Seq[Card]):Seq[Card] = {
-    ???
+    hand.permutations.maxBy(hands => processHand(removeCard(hands, bestCardToRemove(hands))))
+
+    // This list of challenges felt alot easier then challenge 5
+
+    // Also, one last thing... this feels more like SQL queries on a db then programming, it 
+    // also feels really abstracted away from the computer, assembly seems long forgotten here...
+    // in a world where everyday I wake up to 10 more reasons why "ai" will take my future
+    // job because it can now abstract more away for us.... feels like we should be heading in the
+    // other direction and getting close to the machine... dunno, im completely inexperienced!
+    // :) thanks for the challenges, it was frustrating trying to figure out the syntax, but 
+    // it all turned out to be fun in the end!
   }
 
 
