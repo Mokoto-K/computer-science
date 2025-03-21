@@ -55,7 +55,8 @@ object Challenge5 {
     */
   def liveNeighbours(pos:Position, state:ConwayState):Int = {
 
-    // This feels like i have too much power... like im getting drunker and drunker on figuring out one liners...
+    // take the x,y coords of living squares and count the number of comparisons with a given 
+    // position that returns true if they arnt the same square or are one square away
     state.keys.count((x, y) => (x != pos._1 || y != pos._2) && 
       (math.abs(x - pos._1) <= 1 && math.abs(y - pos._2) <= 1))
 
@@ -66,7 +67,7 @@ object Challenge5 {
     * Next, define a function that determines whether a position should be alive or dead
     */
   def aliveNextTurn(pos:(Int, Int), state:ConwayState):Boolean = {
-    // I ran through this the first time and didn't think to solve for cells resurrecting from the ded...
+    // More checks for equality against the games rules
     (isAlive(pos, state) && liveNeighbours(pos, state) > 1 && liveNeighbours(pos, state) < 4) || 
     (!isAlive(pos, state) && liveNeighbours(pos, state) == 3)
   }
@@ -75,11 +76,12 @@ object Challenge5 {
     * Next, define a function that will compute the next state of the game of life, for a given maximum X and Y
     */
   def nextConwayState(state:ConwayState, maxSize:(Int, Int) = (20, 20)):ConwayState = {
-
-    // This took way too long to get right... mainly due to forgetting the game rules.
+     
+    // Go through each int in maxSize (0 to 20) for both x and y coords and check against 
+    // game rules to get the next game state.
     (for {
-    x <- 0 to maxSize._1
-    y <- 0 to maxSize._2 if (aliveNextTurn((x, y), state))
-  } yield (x, y) -> true).toMap
+      x <- 0 to maxSize._1
+      y <- 0 to maxSize._2 if (aliveNextTurn((x, y), state))
+    } yield (x, y) -> true).toMap
   }
 }

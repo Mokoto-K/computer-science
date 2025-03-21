@@ -62,11 +62,10 @@ object Challenge4 {
     Produce a vignere table as a Map[Int,String]
     */
   def vignereTable:Map[Int, String] = {
-    // the problem with learning scala and functional programming at the same time is...
-    (0 until 26).map(key => key -> (alpha.slice(key, 26) ++ alpha.slice(0, key))).toMap
+    (0 until 26).map(num => num -> (alpha.slice(num, 26) ++ alpha.slice(0, num))).toMap
 
-    // unlike other languages... i'm not sure when a one liner is too much, or when it's 
-    // just "good functional programming bro"
+    // being new to functional programming i'm not sure when a one liner is too much, 
+    // or when it's just "good functional programming"
   }
 
   /**
@@ -81,7 +80,7 @@ object Challenge4 {
     Hint: String has a toSeq method that will convert it into a Seq[Char]
     */
   def letterToNum(key:String):Seq[Int] = {
-    // This feels resonable but also, you wouldnt do this in any other language.. i think.
+    // retireves the index where a char from a given string appears in the alphabet and adds it to a seq 
     key.map(letter => alpha.indexOf(letter)).toSeq
   }
 
@@ -112,16 +111,15 @@ object Challenge4 {
           or read up on it on Wikipedia: https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
     */
   def encode(plaintext:String, key:String):String = {
-    // This is fairly standard, get the length we need for the key 
-    val repeatedKey = key * ((plaintext.length() / key.length()) + 1)
+    // Repeat the keystring for atleast the minimum length of the plaintext we want to encrypt 
+    val newKey = key * ((plaintext.length() / key.length()) + 1)
 
-    // maybe i just suck at it.... but functional programming seems to lead to horrible code 
-    plaintext.zip(letterToNum(repeatedKey)).map((letter, index) => 
-        vignereTable(index)(alpha.indexOf(letter))).mkString
+    // zip the plaintext chars with there alphabet indexes and map each char to its transformed val in the vigneretable 
+    plaintext.zip(letterToNum(newKey)).map((char, i) => vignereTable(i)(alpha.indexOf(char))).mkString
 
     // that feels messy and clumsy like it needs to be broken up... but myabe its just
-    // "good succinct functional programming"??? Feels more like egyptian hieroglyphics,
-    // a haiku or a python bro trying to write a program in a single line.. but its funcational..
+    // "good succinct functional programming"??? Feels more like egyptian hieroglyphics, a haiku 
+    // or a python bro trying to write a program in a single line.. but its funcational and fun!
   }
 
   /**
@@ -131,11 +129,16 @@ object Challenge4 {
     and that gives us a character number to look up in the alphabet.
     */
   def decode(cyphertext:String, key:String):String = {
-    // if functional coding is so good... why write another function for this? just reuse (en)code... kinda
-    encode(cyphertext, key.map(letter => alpha((26 - alpha.indexOf(letter)) % 26)))
+    // Since all this encryption algo does is shift letters forward based on a provided key 
+    // we can reverse the process by shifting the key backwards, for each letter in the key 
+    // we get its index in the alphabet, subtract it from 26 to get its reverse shift, then 
+    // use mod to wrap it around the alphabet again incase we go outta bounds. This then 
+    // gives us the decryption key and since our encode function already handles the algos 
+    // encryption we can reuse it with the transformed key to effectively decrypt the 
+    // cyphertext.... encryption is fun, shoutout COSC130 bby
 
-    // maybe i am the problem with functional programming, I haven't yet learnt where 
-    // the line is... I feel i crossed it with this section. Encryption is fun tho...
+    encode(cyphertext, key.map(letter => alpha((26 - alpha.indexOf(letter)) % 26)))
+    
   }
 
 }

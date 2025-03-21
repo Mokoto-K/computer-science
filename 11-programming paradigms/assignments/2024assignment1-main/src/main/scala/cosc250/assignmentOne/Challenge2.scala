@@ -37,6 +37,7 @@ object Challenge2 {
   * You might find using "mystring".contains(char) useful to keep it short
   */
   def letterScore(char:Char):Int = { 
+    // Using pattern matching to obtain a given letters score
     char match  
       case c if "AEIOULNSTR".contains(c) => 1
       case c if "DG".contains(c) => 2 
@@ -52,8 +53,9 @@ object Challenge2 {
     * Don't forget - DoubleWordScores etc affect the word as a whole, not individual letters
     */
   def letterAndSquareScore(char:Char, sq:Square):Int = {
+    // More pattern matching for square score types
     sq match 
-      case OrdinarySquare => letterScore(char) // Not sure if i need this since _  
+      case OrdinarySquare => letterScore(char)        // Not sure if i need this since _ case
       case DoubleLetterScore => letterScore(char) * 2 
       case TripleLetterScore => letterScore(char) * 3 
       case _ => letterScore(char)
@@ -70,9 +72,8 @@ object Challenge2 {
     */
   
   def totalLetterScore(word:String, squares:Seq[Square]):Int = {
-    word.zip(squares).map { 
-      case (char, sq) => letterAndSquareScore(char, sq)
-      }.sum
+    // sum up all returned values from letterAndSquareScore func by passing it tuples of letters and square types 
+    word.zip(squares).map((char, sq) => letterAndSquareScore(char, sq)).sum
   }
 
   /**
@@ -82,14 +83,13 @@ object Challenge2 {
     squares, the multiplier will be 3 * 3 * 2 = 18
     */
   def scrabbleScore(word:String, squares:Seq[Square]):Int = {
+    // More pattern matching this time to obtain the total word multiplier 
     var multiplier: Int = squares.foldLeft(1) {
       case (accum, DoubleWordScore) => accum * 2 
       case (accum, TripleWordScore) => accum * 3
       case (accum, _) => accum * 1
     }
-
+    // calculate the total score by the total multiplier obtained above
     totalLetterScore(word, squares) * multiplier
-    
   }
-
 }

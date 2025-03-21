@@ -15,11 +15,7 @@ object Challenge1 {
     Make this function return true if a list is a palindrome. Note, you ARE permitted to
     use the inbuilt reverse method on Lists.
    */
-  def isPalindrome[T](list:List[T]):Boolean = {
-
-    if (list == list.reverse) true else false 
-
-  }
+  def isPalindrome[T](list:List[T]):Boolean = if (list == list.reverse) true else false
 
   /** 
     Make this function return true if every entry is bigger than its position in the list.
@@ -29,12 +25,9 @@ object Challenge1 {
 
     You will find list.zipWithIndex and list.forall useful
    */
-  def entriesBiggerThanIndex(list:List[Int]):Boolean = {
+  def entriesBiggerThanIndex(list:List[Int]):Boolean = 
     
-    list.zipWithIndex.forall(tuple => tuple._1 > tuple._2) 
-    
-  }
-
+    list.zipWithIndex.forall(tuple => tuple._1 > tuple._2)
 
   /**
     A little tricker. Make this function return true if every second entry in a list
@@ -44,12 +37,10 @@ object Challenge1 {
     You might find zipWithIndex and filter useful to extract every second element.
     You might also find it helpful to print out an intermediate result
   */
-  def secondPalindrome[T](list:List[T]):Boolean = {
+  def secondPalindrome[T](list:List[T]):Boolean = 
 
     // Reusing isPalindrome from above "cus we functional like dat"
     isPalindrome(list.zipWithIndex.filter(tuple => tuple._2 % 2 != 0).map(_._1))
-
-  }
 
 }
 

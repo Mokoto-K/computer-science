@@ -109,15 +109,7 @@ object Challenge6 {
   def bestOrder(hand:Seq[Card]):Seq[Card] = {
     hand.permutations.maxBy(hands => processHand(removeCard(hands, bestCardToRemove(hands))))
 
-    // This list of challenges felt alot easier then challenge 5
-
-    // Also, one last thing... this feels more like SQL queries on a db then programming, it 
-    // also feels really abstracted away from the computer, assembly seems long forgotten here...
-    // in a world where everyday I wake up to 10 more reasons why "ai" will take my future
-    // job because it can now abstract more away for us.... feels like we should be heading in the
-    // other direction and getting close to the machine... dunno, im completely inexperienced!
-    // :) thanks for the challenges, it was frustrating trying to figure out the syntax, but 
-    // it all turned out to be fun in the end!
+    // This list of challenges felt alot easier then challenge 5 or 4 tbh, nvim btw.
   }
 
 
