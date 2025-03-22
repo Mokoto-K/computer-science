@@ -7,3 +7,4 @@ textbooks/
 .bsp/
 .scala-build/
 .DS_Store/
+.ipynb_checkpoints
